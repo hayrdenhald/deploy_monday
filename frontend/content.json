@@ -1,9 +1,9 @@
 {
-	"chosenPersonName": "r",
-	"lastUpdate": "28.10.23",
-	"deployAmounts": {
-		"b": 1,
-		"h": 1,
-		"r": 2
-	}
+  "chosenPersonName": "",
+  "lastUpdate": "28.10.23",
+  "deployAmounts": {
+    "b": 0,
+    "h": 0,
+    "r": 0
+  }
 }

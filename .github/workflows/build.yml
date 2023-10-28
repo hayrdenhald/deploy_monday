@@ -4,7 +4,8 @@ on:
   schedule:
     - cron: '00 4 * * 1'
 
-  workflow_dispatch:
+  ## Enable if you need to run job manually
+  # workflow_dispatch:
 
 permissions:
   contents: write
@@ -27,7 +28,7 @@ jobs:
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add -A
-            git diff-index --quiet HEAD || (git commit -a -m "run index.js" --allow-empty)
+            git diff-index --quiet HEAD || (git commit -a -m "run ./backend/main.js" --allow-empty)
             
         - name: push changes
           uses: ad-m/github-push-action@master

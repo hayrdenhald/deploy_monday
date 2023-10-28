@@ -75,12 +75,6 @@ function incrementDeployAmount(person) {
 }
 
 async function updateFrontendContent(chosenPerson, lastUpdate, persons) {
-  let y = {};
-
-  persons.forEach(person => {
-    y[person.name] = person.deployAmount;
-  });
-
   const content = {
     chosenPersonName: chosenPerson.name,
     lastUpdate,

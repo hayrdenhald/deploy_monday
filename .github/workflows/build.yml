@@ -1,0 +1,36 @@
+name: build
+
+on:
+  schedule:
+    - cron: '00 4 * * 1'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: build and checkout repo content
+          uses: actions/setup-node@v3
+          with:
+            node-version: '20.x'
+
+        - name: execute js script
+          run: npm run build
+            
+        - name: commit files
+          run: |
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add -A
+            git diff-index --quiet HEAD || (git commit -a -m "run index.js" --allow-empty)
+            
+        - name: push changes
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: main

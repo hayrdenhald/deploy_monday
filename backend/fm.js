@@ -14,6 +14,16 @@ export async function write(path, content) {
   }
 }
 
+export async function append(path, content) {
+  try {
+    await fs.appendFile(path, content, { encoding: 'utf8' });
+    return true;
+  } catch (err) {
+    console.error(err);
+    return false;
+  }
+}
+
 export async function exists(path) {
   try {
     const stats = await fs.stat(path);

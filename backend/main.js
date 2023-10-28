@@ -1,18 +1,23 @@
 import * as DB from "./db.js";
 import * as FM from "./fm.js";
+import * as LG from "./logger.js";
 import * as Utils from "./utils.js";
 
 (async function main() {
   const dbInitializationSuccess = await DB.initializeDb();
   if (!dbInitializationSuccess) {
-    throw new Error("Something went wrong with initialization of the db, exiting...");
+    const errorMessage = "Something went wrong with initialization of the db, exiting...";
+    await LG.log(errorMessage);
+    throw new Error(errorMessage);
   }
 
   const persons = await DB.getPersons();
   const choosingPool = await DB.getChoosingPool();
 
   if (!choosingPool.length) {
-    throw new Error("The choosing pool was empty!");
+    const errorMessage = "The choosing pool was empty!";
+    await LG.log(errorMessage);
+    throw new Error(errorMessage);
   }
 
   const chosenPersonName = choose(choosingPool);
@@ -22,20 +27,43 @@ import * as Utils from "./utils.js";
     newChoosingPool = persons.map(x => x.name);
   }
 
-  await DB.setChoosingPool(newChoosingPool);
+  const setChoosingPoolSuccess = await DB.setChoosingPool(newChoosingPool);
+  if (!setChoosingPoolSuccess) {
+    const errorMessage = "Failed to set choosing pool!";
+    await LG.log(errorMessage);
+    throw new Error(errorMessage);
+  }
 
-  await DB.setChosenPersonName(chosenPersonName);
+  const setChosenPersonNameSuccess = await DB.setChosenPersonName(chosenPersonName);
+  if (!setChosenPersonNameSuccess) {
+    const errorMessage = "Failed to set chosen person name!";
+    await LG.log(errorMessage);
+    throw new Error(errorMessage);
+  }
 
   const lastUpdate = Utils.getCurrentSimpleDate();
-  await DB.setLastUpdate(lastUpdate);
+
+  const setLastUpdateSuccess = await DB.setLastUpdate(lastUpdate);
+  if (!setLastUpdateSuccess) {
+    const errorMessage = "Failed to set last update!";
+    await LG.log(errorMessage);
+    throw new Error(errorMessage);
+  }
 
   const chosenPerson = persons.find(x => x.name === chosenPersonName);
   const newPerson = incrementDeployAmount(chosenPerson);
   const newPersons = persons.map(x => x.name === newPerson.name ? newPerson : x);
 
-  await DB.setPersons(newPersons);
+  const setPersonsSuccess = await DB.setPersons(newPersons);
+  if (!setPersonsSuccess) {
+    const errorMessage = "Failed to set persons!";
+    await LG.log(errorMessage);
+    throw new Error(errorMessage);
+  }
 
   updateFrontendContent(chosenPerson, lastUpdate, newPersons);
+
+  await LG.log("Successfully made new person choice and updated frontend content.");
 })();
 
 function choose(choices) {

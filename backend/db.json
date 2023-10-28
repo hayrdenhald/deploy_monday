@@ -1,23 +1,22 @@
 {
-  "persons": [
-    {
-      "name": "b",
-      "deployAmount": 0
-    },
-    {
-      "name": "h",
-      "deployAmount": 0
-    },
-    {
-      "name": "r",
-      "deployAmount": 0
-    }
-  ],
-  "chosenPersonName": "",
-  "choosingPool": [
-    "h",
-    "b",
-    "r"
-  ],
-  "lastUpdate": "27.10.23"
+	"persons": [
+		{
+			"name": "b",
+			"deployAmount": 1
+		},
+		{
+			"name": "h",
+			"deployAmount": 0
+		},
+		{
+			"name": "r",
+			"deployAmount": 0
+		}
+	],
+	"chosenPersonName": "b",
+	"choosingPool": [
+		"h",
+		"r"
+	],
+	"lastUpdate": "28.10.23"
 }

@@ -1,0 +1,17 @@
+{
+  "persons": [
+    {
+      "name": "b",
+      "deployAmount": 0
+    },
+    {
+      "name": "h",
+      "deployAmount": 0
+    },
+    {
+      "name": "r",
+      "deployAmount": 0
+    }
+  ],
+  "chosenPerson": "h"
+}

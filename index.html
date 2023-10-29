@@ -16,52 +16,43 @@
 <body>
   <header>
     <h1>deploy monday</h1>
-    <p>
-      <i>last update: <span id="last-update-span">12.07.23</span></i>
+    <p id="header-info">
+      <i>last update: <span id="last-update-span">??.??.??</span></i>
     </p>
   </header>
 
-  <div id="outer-container">
-    <div id="inner-container">
-      <div class="section-container">
-        <div class="surprise-container">
-          <img id="b-surprise" class="surprise-img" src="frontend/images/surprise.svg" width="256px">
-        </div>
-        <div class="image-container">
-          <img id="b-avatar" class="avatar" width="256px" src="frontend/images/b_avatar.svg" />
-        </div>
-        <div class="deploy-amount">
-          <img src="frontend/images/rocket_grayscale.svg" width="32px" />
-          <p>⨯ <span id="b-deploy-amount">0</span></p>
-        </div>
+  <main>
+    <div class="section-container">
+      <div class="surprise-container">
+        <img id="b-surprise" class="surprise-img" src="frontend/images/surprise.svg">
       </div>
-      <div class="section-container">
-        <div class="surprise-container">
-          <img id="h-surprise" class="surprise-img" src="frontend/images/surprise.svg" width="256px">
-        </div>
-        <div class="image-container">
-          <img id="h-avatar" class="avatar" width="256px" src="frontend/images/h_avatar.svg" />
-        </div>
-        <div class="deploy-amount">
-          <img src="frontend/images/rocket_grayscale.svg" width="32px" />
-          <p>⨯ <span id="h-deploy-amount">0</span></p>
-        </div>
-      </div>
-      <div class="section-container">
-        <div class="surprise-container">
-          <img id="r-surprise" class="surprise-img" src="frontend/images/surprise.svg" width="256px">
-        </div>
-        <div class="image-container">
-          <img id="r-avatar" class="avatar" width="256px" src="frontend/images/r_avatar.svg" />
-        </div>
-        <div class="deploy-amount">
-          <img src="frontend/images/rocket_grayscale.svg" width="32px" />
-          <p>⨯ <span id="r-deploy-amount">0</span></p>
-        </div>
+      <img id="b-avatar" class="avatar" src="frontend/images/default_avatar.svg" />
+      <div class="deploy-amount">
+        <img src="frontend/images/rocket_grayscale.svg" />
+        <p>⨯ <span id="b-deploy-amount">?</span></p>
       </div>
     </div>
-  </div>
-  </div>
+    <div class="section-container">
+      <div class="surprise-container">
+        <img id="h-surprise" class="surprise-img" src="frontend/images/surprise.svg">
+      </div>
+      <img id="h-avatar" class="avatar" src="frontend/images/default_avatar.svg" />
+      <div class="deploy-amount">
+        <img src="frontend/images/rocket_grayscale.svg" />
+        <p>⨯ <span id="h-deploy-amount">?</span></p>
+      </div>
+    </div>
+    <div class="section-container">
+      <div class="surprise-container">
+        <img id="r-surprise" class="surprise-img" src="frontend/images/surprise.svg">
+      </div>
+      <img id="r-avatar" class="avatar" src="frontend/images/default_avatar.svg" />
+      <div class="deploy-amount">
+        <img src="frontend/images/rocket_grayscale.svg" />
+        <p>⨯ <span id="r-deploy-amount">?</span></p>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

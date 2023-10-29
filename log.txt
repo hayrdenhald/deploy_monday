@@ -1,2 +1,3 @@
 [ 29/10/23, 16:50:28 ]: Successfully made new person choice and updated frontend content.
 [ 29/10/23, 17:05:34 ]: Successfully made new person choice and updated frontend content.
+[ 29/10/23, 19:12:27 ]: Successfully made new person choice and updated frontend content.

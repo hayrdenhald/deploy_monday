@@ -4,3 +4,4 @@
 [ 05/11/23, 19:12:32 ]: Successfully made new person choice and updated frontend content.
 [ 12/11/23, 19:12:28 ]: Successfully made new person choice and updated frontend content.
 [ 19/11/23, 19:12:46 ]: Successfully made new person choice and updated frontend content.
+[ 26/11/23, 19:12:36 ]: Successfully made new person choice and updated frontend content.

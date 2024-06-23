@@ -2,7 +2,7 @@
 	"persons": [
 		{
 			"name": "b",
-			"deployAmount": 11
+			"deployAmount": 12
 		},
 		{
 			"name": "h",
@@ -13,9 +13,11 @@
 			"deployAmount": 12
 		}
 	],
-	"chosenPersonName": "r",
+	"chosenPersonName": "b",
 	"choosingPool": [
-		"b"
+		"b",
+		"h",
+		"r"
 	],
-	"lastUpdate": "16.06.24"
+	"lastUpdate": "23.06.24"
 }

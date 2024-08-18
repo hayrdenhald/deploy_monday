@@ -6,17 +6,16 @@
 		},
 		{
 			"name": "h",
-			"deployAmount": 14
+			"deployAmount": 15
 		},
 		{
 			"name": "r",
 			"deployAmount": 15
 		}
 	],
-	"chosenPersonName": "r",
+	"chosenPersonName": "h",
 	"choosingPool": [
-		"b",
-		"h"
+		"b"
 	],
-	"lastUpdate": "11.08.24"
+	"lastUpdate": "18.08.24"
 }

@@ -10,14 +10,13 @@
 		},
 		{
 			"name": "r",
-			"deployAmount": 17
+			"deployAmount": 18
 		}
 	],
 	"chosenPersonName": "r",
 	"choosingPool": [
 		"b",
-		"h",
-		"r"
+		"h"
 	],
-	"lastUpdate": "06.10.24"
+	"lastUpdate": "13.10.24"
 }
